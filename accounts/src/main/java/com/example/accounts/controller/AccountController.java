@@ -191,6 +191,6 @@ public class AccountController {
     @PostMapping("/test")
     public String test(){
         System.out.println("hit by webhook");
-        return "sfnlafnn,bkjf,hdfsjdsklkjhjghfgvjbknlfghjn";
+        return "sfnlafnn,bkjfjhjghfgvjbknlfghjn";
     }
 }
