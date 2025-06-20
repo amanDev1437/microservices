@@ -1,0 +1,14 @@
+spring:
+  config:
+    activate:
+      on-profile: "prod"
+build:
+  version: "1.0"
+
+accounts:
+  message: "Welcome to EazyBank accounts related prod APIs"
+  contactDetails:
+    name: "Patel - Product Owner"
+    email: "patel@eazybank.com"
+  onCallSupport:
+    - (555)555-1234

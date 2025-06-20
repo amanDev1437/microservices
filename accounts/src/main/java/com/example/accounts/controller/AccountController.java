@@ -185,6 +185,7 @@ public class AccountController {
     })
     @GetMapping("/contact-info")
     public ResponseEntity<AccountsContactInfoDto> getContactInfo(){
+        System.out.println("contact-info hit by webhook");
         return ResponseEntity.status(HttpStatus.OK).body(accountsContactInfoDto);
     }
 
