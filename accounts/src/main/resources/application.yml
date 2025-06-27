@@ -2,6 +2,8 @@ server:
     port: 8080
 
 spring:
+  application:
+    name: "accounts"
   datasource:
     url: jdbc:h2:mem:test
     driver-class-name: org.h2.Driver
@@ -18,21 +20,10 @@ spring:
       ddl-auto: update
     database-platform: org.hibernate.dialect.H2Dialect
   config:
-    import:
-      - "application_qa.yml"
-      - "application_prod.yml"
+    import: "optional:configserver:http://localhost:8071/"
   profiles:
-    active:
-      - "sfcsagsdbsv"
+    active: "prod"
 
-build:
- version: "3.0"
 
-accounts:
-  message: "Welcome to EazyBank accounts related local APIs"
-  contactDetails:
-    name: "Aman Singh- Developer"
-    email: "aman@eazybank.com"
-  onCallSupport:
-    - (555)555-1234
-    - (555)523-1345
+
+
