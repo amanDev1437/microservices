@@ -20,6 +20,11 @@ spring:
     import: "optional:configserver:http://localhost:8071/"
   profiles:
     active: "prod"
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 build:
   version: "3.0"
@@ -32,3 +37,9 @@ cards:
   onCallSupport:
     - (412) 419-3491
     - (915) 382-1932
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
