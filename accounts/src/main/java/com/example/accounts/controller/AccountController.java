@@ -38,7 +38,7 @@ public class AccountController {
 
     private final IAccountService accountService;
 
-    @Value("${build.version}")
+    @Value("3.0")
     private String buildVersion;
 
     @Autowired
