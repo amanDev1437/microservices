@@ -74,7 +74,7 @@
 				<version>3.4.2</version>
 				<configuration>
 					<to>
-						<image>amandev1437/eurekaserver:v8</image>
+						<image>amandev1437/eurekaserver:v9</image>
 					</to>
 				</configuration>
 			</plugin>
