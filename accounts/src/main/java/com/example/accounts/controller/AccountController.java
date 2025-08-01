@@ -8,6 +8,7 @@ import com.example.accounts.dto.ErrorResponseDto;
 import com.example.accounts.dto.ResponseDto;
 import com.example.accounts.repository.AccountRepository;
 import com.example.accounts.service.IAccountService;
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -175,6 +176,7 @@ public class AccountController {
                     )
             )
     })
+    @RateLimiter(name = "getJavaVersion")
     @GetMapping("/java-version")
     public ResponseEntity<String> getJavaVersion(){
         return ResponseEntity.status(HttpStatus.OK).body(environment.getProperty("java.version"));
@@ -208,4 +210,15 @@ public class AccountController {
         System.out.println("hit by webhook");
         return "sfnlafnn,bkjfjhjghfgvjbknlfghjn";
     }
+
+    public static void main(String[] args){
+        class Add{
+            static void getName(){
+                System.out.println("Aman Singh");
+            }
+        }
+        Add a = new Add();
+        Add.getName();
+    }
 }
+
