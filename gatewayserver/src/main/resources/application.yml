@@ -14,7 +14,7 @@ spring:
               enabled: false
               lower-case-service-id: true
           httpclient:
-            response-timeout: 5s
+            response-timeout: 10s
             connect-timeout: 1000
   data:
     redis:

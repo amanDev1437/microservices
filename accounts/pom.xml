@@ -30,11 +30,22 @@
         <java.version>17</java.version>
         <spring-cloud.version>2025.0.0</spring-cloud.version>
         <start-class>com.example.accounts.AccountsApplication</start-class>
+        <otelVersion>2.11.0</otelVersion>
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.opentelemetry.javaagent</groupId>
+            <artifactId>opentelemetry-javaagent</artifactId>
+            <version>${otelVersion}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-registry-prometheus</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -143,7 +154,7 @@
                 <version>3.4.2</version>
                 <configuration>
                     <to>
-                        <image>amandev1437/accounts:v10
+                        <image>amandev1437/accounts:v11
                         </image>
                     </to>
                 </configuration>
